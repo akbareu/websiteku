@@ -27,6 +27,20 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 
+#layoutError {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#layoutError #layoutError_content {
+  min-width: 0;
+  flex-grow: 1;
+}
+#layoutError #layoutError_footer {
+  min-width: 0;
+}
+
+
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
