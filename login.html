@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="assets/img/logo web3.png">
+    <title>Welcome!</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <linkh ref="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+    <!-- Custom styles for this template-->
+    <link href="admin/css/sb-admin-2.min.css" rel="stylesheet">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyBqbtFHnLGBEG1Y3CwWLleLBCeZtDOPpHU",
+        authDomain: "akbareuu.firebaseapp.com",
+        databaseURL: "https://akbareuu-default-rtdb.firebaseio.com",
+        projectId: "akbareuu",
+        storageBucket: "akbareuu.appspot.com",
+        messagingSenderId: "514507179273",
+        appId: "1:514507179273:web:65de833d510acf87223fd8",
+        measurementId: "G-EMZ5S4L8GF"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+</head>
+
+<body class="bg-gradient-primary">
+
+    <div class="container" id="login-form">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Welcome!</h1>
+                                    </div>
+                                    <form class="user">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control form-control-user"
+                                                id="inputEmail" aria-describedby="emailHelp"
+                                                placeholder="Enter Email Address...">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control form-control-user"
+                                                id="inputPassword" placeholder="Password">
+                                        </div>
+                                        <button id="sign-in" type="button" class="btn btn-primary btn-user btn-block">
+                                            Login
+                                        </button>
+                                        <button id="sign-out" type="button" class="btn btn-warning btn-user btn-block">
+                                            Logout
+                                        </button>
+                                        <hr>
+                                        <button id="google-sign-in" type="button" class="btn btn-google btn-user btn-block">
+                                            <i class="fab fa-google fa-fw"></i> Login with Google
+                                        </button>
+                                    </form>
+                                    <hr>
+                                    <div class="text-center">
+                                        <button id="create-account" type="button" class="small btn btn-success" href="register.html">Create an Account!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+var currentUser = {};
+
+  $("#sign-in").click(function(){
+  var email = $("#inputEmail").val();
+  var password = $("#inputPassword").val();
+  console.log("Existing user = " + email + " " + password);
+
+  SignIn(email, password);
+  });
+
+  $("#sign-out").click(function(){
+  firebase.auth().signOut()
+  console.log("has logged out")
+  });
+
+  $("#create-account").click(function(){
+  var email = $("#inputEmail").val();
+  var password = $("#inputPassword").val();
+  console.log("New user = " + email + " " + password);
+
+  CreateUser(email, password);
+  });
+
+function SignIn(email, password) {
+  firebase.auth().signInWithEmailAndPassword(email, password)
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorMessage);
+  });
+}
+
+
+function CreateUser(email, password){
+
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorMessage);
+  });
+  }
+
+function writeUserData(user) {
+  firebase.database().ref('users/' + user.uid).set({
+    email: user.email
+  });
+}
+
+  firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    var email = user.email;
+    currentUser = user;
+    writeUserData(user);
+    console.log(currentUser.email + " has logged in");
+  } else {
+    // User is signed out
+    // ...
+  }
+});
+
+    </script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="admin/vendor/jquery/jquery.min.js"></script>
+    <script src="admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="admin/js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>

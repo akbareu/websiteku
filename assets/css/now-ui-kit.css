@@ -1709,7 +1709,7 @@ fieldset[disabled] .navbar .navbar-nav>a.btn.active {
 .show>.btn-primary.dropdown-toggle,
 .show>.btn-primary.dropdown-toggle:focus,
 .show>.btn-primary.dropdown-toggle:hover {
-  background-color: #fa7a50;
+  background-color: #5758BB;
   color: #FFFFFF;
   box-shadow: none;
 }
@@ -5522,7 +5522,7 @@ img {
   border: 0;
 }
 
-.card[data-background-color="orange"] {
+.card[data-background-color="purple"] {
   background-color: #8c7ae6;
 }
 
@@ -5840,7 +5840,7 @@ img {
 }
 
 .login-page .card-login .logo-container {
-  width: 65px;
+  width: 200px;
   margin: 0 auto;
   margin-bottom: 55px;
 }
@@ -6277,8 +6277,8 @@ img {
   right: 12%;
 }
 
-[data-background-color="orange"] {
-  background-color: #e95e38;
+[data-background-color="purple"] {
+  background-color: #8c7ae6;
 }
 
 [data-background-color="black"] {
