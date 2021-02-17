@@ -58,35 +58,18 @@
             <div class="card card-signup" data-background-color="purple">
               <form class="form" method="" action="">
                 <div class="card-header text-center">
-                  <h3 class="card-title title-up">Sign Up</h3>
                   <div class="social-line">
-                    <a href="#pablo" class="btn btn-neutral btn-facebook btn-icon btn-round">
-                      <i class="fab fa-facebook-square"></i>
-                    </a>
-                    <a href="#pablo" class="btn btn-neutral btn-twitter btn-icon btn-lg btn-round">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#pablo" class="btn btn-neutral btn-google btn-icon btn-round">
-                      <i class="fab fa-google-plus"></i>
-                    </a>
+                    <img width="240" height="240" src="assets/img/logo web.png" class="img img-fluid">
                   </div>
                 </div>
                 <div class="card-body">
                   <div class="input-group no-border">
                     <div class="input-group-prepend">
                       <span class="input-group-text">
-                        <i class="now-ui-icons users_circle-08"></i>
+                        <i class="now-ui-icons ui-1_email-85"></i>
                       </span>
                     </div>
-                    <input type="text" class="form-control" placeholder="First Name...">
-                  </div>
-                  <div class="input-group no-border">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">
-                        <i class="now-ui-icons text_caps-small"></i>
-                      </span>
-                    </div>
-                    <input type="text" placeholder="Last Name..." class="form-control" />
+                    <input id="inputEmail" type="email" class="form-control" placeholder="Email...">
                   </div>
                   <div class="input-group no-border">
                     <div class="input-group-prepend">
@@ -94,16 +77,57 @@
                         <i class="now-ui-icons ui-1_email-85"></i>
                       </span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Email...">
+                    <input id="inputPassword" type="password" class="form-control" placeholder="Password...">
                   </div>
                 </div>
                 <div class="card-footer text-center">
-                  <a href="#pablo" class="btn btn-neutral btn-round btn-lg">Get Started</a>
+                  <button id="create-account" class="btn btn-neutral btn-round btn-lg">Daftar!</button>
                 </div>
               </form>
             </div>
           </div>
-          <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+          <script>
+            var currentUser = {};
+
+            $("#create-account").click(function(){
+            var email = $("#inputEmail").val();
+            var password = $("#inputPassword").val();
+            console.log("New user = " + email + " " + password);
+
+            CreateUser(email, password);
+            });
+
+            function CreateUser(email, password){
+
+            firebase.auth().createUserWithEmailAndPassword(email, password)
+            .catch((error) => {
+              var errorCode = error.code;
+              var errorMessage = error.message;
+              console.log(errorMessage);
+            });
+            }
+
+            function writeUserData(user) {
+              firebase.database().ref('users/' + user.uid).set({
+                email: user.email
+              });
+            }
+
+            firebase.auth().onAuthStateChanged((user) => {
+              if (user) {
+                var email = user.email;
+                currentUser = user;
+                writeUserData(user);
+                console.log(currentUser.email + " has logged in");
+              } else {
+                // User is signed out
+                // ...
+              }
+            });
+
+          </script>
+  
+  <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
   <script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>
   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
   <script src="assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
