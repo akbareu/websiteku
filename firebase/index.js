@@ -28,8 +28,19 @@ function submitForm(e) {
 	var hp = getInputVal('hp');
 	var pesan = getInputVal('pesan');
 
+	// Save pesan ke database
 	saveMessage(nama, subjek, hp, pesan);
-	console.log("Pesan terkirim!!");
+
+	// Alert jempol
+	document.querySelector('.alert').style.display = 'block';
+
+	// Alert jempol hilang selama 2.9 detik
+	setTimeout(function(){
+		document.querySelector('.alert').style.display = 'none';
+	},2900);
+
+	// Bersihkan formulir setelah submit
+	document.getElementById('hubungiForm').reset();
 }
 
 // Fungsi ambil nilai formulir

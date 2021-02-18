@@ -152,13 +152,13 @@
               <div class="col-sm-6 col-lg-8">
                 <div class="form-group">
                   <span><i class="fa fa-user"></i></span>
-                  <input id="nama" name="nama" type="text" value="" placeholder="Nama lengkap" class="form-control" />
+                  <input id="nama" name="nama" type="text" value="" placeholder="Nama lengkap" class="form-control" required />
                 </div>
               </div>
               <div class="col-sm-6 col-lg-8">
                 <div class="form-group">
                   <span><i class="fa fa-folder"></i></span>
-                  <input id="subjek" name="subjek" type="text" value="" placeholder="Subjek" class="form-control" />
+                  <input id="subjek" name="subjek" type="text" value="" placeholder="Subjek" class="form-control" required />
                 </div>
               </div>
               <div class="col-sm-6 col-lg-8">
@@ -170,13 +170,27 @@
               <div class="col-sm-6 col-lg-8">
                 <div class="form-group">
                   <span><i class="fa fa-envelope"></i></span>
-                  <textarea id="pesan" name="pesan" type="text" placeholder="Pesan" class="form-control"></textarea>
+                  <textarea id="pesan" name="pesan" type="text" placeholder="Pesan" class="form-control" required></textarea>
                 </div>
               </div>
               <div class="col-sm-6 col-lg-8">
                 <button type="submit" class="btn btn-round btn-primary">
                   <i class="fa fa-paper-plane"></i> Kirim
                 </button>
+                <div class="alert alert-success" role="alert">
+                  <div class="container">
+                    <div class="alert-icon">
+                      <i class="now-ui-icons ui-2_like"></i>
+                    </div>
+                    <strong>Berhasil!</strong>
+                    <p>Pesanmu telah dikirim.</p>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">
+                        <i class="now-ui-icons ui-1_simple-remove"></i>
+                      </span>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </form>
