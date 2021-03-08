@@ -29,7 +29,6 @@ Copyright (c) 2015 Daniel Eden
   height: 320px;
   border: 1px solid #9C9C9C;
   background-color: #EAEAEA;
-  display: none;
 }
 #login .container #login-row #login-column #login-box #login-form {
   padding: 20px;
@@ -38,7 +37,6 @@ Copyright (c) 2015 Daniel Eden
 /*Coree Dashboard*/
 .dashboard_div {
   margin-top: -120px;
-  display: none;
 }
 
 .animated {
