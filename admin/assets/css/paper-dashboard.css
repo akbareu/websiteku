@@ -21,6 +21,8 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 Copyright (c) 2015 Daniel Eden
 */
 
+
+/*Coree Login Page*/
 #login .container #login-row #login-column #login-box {
   margin-top: 120px;
   max-width: 600px;
@@ -33,9 +35,10 @@ Copyright (c) 2015 Daniel Eden
   padding: 20px;
 }
 
-#dashboard_div {
+/*Coree Dashboard*/
+.dashboard_div {
   margin-top: -120px;
-  display: block;
+  display: none;
 }
 
 .animated {

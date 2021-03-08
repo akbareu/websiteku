@@ -15,19 +15,46 @@
 // Autentikasi login Firebase
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    // User login
-    document.getElementById("admin_div").style.display = "initial";
-    document.getElementById("login_div").style.display = "none";
+    // User is signed in.
+
+    document.getElementById("admin_div").style.display = "block";
+    document.getElementById("logo_div").style.display = "none";
+
+    var user = firebase.auth().currentUser;
+
+    if(user != null){
+
+      var email_id = user.email;
+      document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
+
+    }
+
   } else {
     // No user is signed in.
+
+    document.getElementById("admin_div").style.display = "none";
+    document.getElementById("login_div").style.display = "block";
+
   }
 });
 
+function login(){
 
-// Submit form login
-function login() {
-  var email = document.getElementById("inputEmail").value;
-  var password = document.getElementById("inputPassword").value;
+  var userEmail = document.getElementById("inputEmail").value;
+  var userPass = document.getElementById("inputPassword").value;
 
-  window.alert(email + " " + password);
+  firebase.auth().signInWithEmailAndPassword(inputEmail, inputPassword).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+
+    window.alert("Error : " + errorMessage);
+
+    // ...
+  });
+
+}
+
+function logout(){
+  firebase.auth().signOut();
 }
