@@ -39,6 +39,21 @@ Copyright (c) 2015 Daniel Eden
   margin-top: -120px;
 }
 
+.upload {
+  display: flex;
+  min-height: 60vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#uploader {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 60%;
+  margin-bottom: 10px;
+}
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -2398,9 +2413,11 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   padding-bottom: .9rem;
   position: relative; }
   .alert.alert-success {
-    background-color: #7ed6a5; }
+    background-color: #7ed6a5;
+    display: none; }
   .alert.alert-danger {
-    background-color: #f1926e; }
+    background-color: #f1926e;
+    display: none; }
   .alert.alert-warning {
     background-color: #fccf71; }
   .alert.alert-info {

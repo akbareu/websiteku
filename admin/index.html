@@ -75,8 +75,8 @@ Coded by www.creative-tim.com
           </li>
           <li>
           <a class="nav-link" id="v-pills-cv-tab" data-toggle="pill" href="#v-pills-cv" role="tab" aria-controls="v-pills-cv" aria-selected="false">
-            <i class="nc-icon nc-app"></i>
-            <p>Blogs</p>
+            <i class="nc-icon nc-book-bookmark"></i>
+            <p>E-Book</p>
           </a>
           </li>
         </ul>
@@ -562,10 +562,32 @@ Coded by www.creative-tim.com
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header">
-                  <h5 class="card-title">Create Blog :</h5>
+                  <h5 class="card-title">Upload eBook :</h5>
                 </div>
                 <div class="card-body">
-
+                  <div class="alert alert-success alert-with-icon alert-dismissible fade show" data-notify="container">
+                    <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+                      <i class="nc-icon nc-simple-remove"></i>
+                    </button>
+                    <span data-notify="icon" class="nc-icon nc-bell-55"></span>
+                    <span data-notify="message"><b> Hoorayy - </b>
+                    File kamu telah diupload : )</span>
+                  </div>
+                  <div class="alert alert-danger alert-with-icon alert-dismissible fade show" data-notify="container">
+                    <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+                      <i class="nc-icon nc-simple-remove"></i>
+                    </button>
+                    <span data-notify="icon" class="nc-icon nc-bell-55"></span>
+                    <span data-notify="message"><b> Oops - </b>
+                    Terjadi masalah saat upload : (</span>
+                  </div>
+                  <form id="uploadCV">
+                    <p><b>Note:</b> Pastikan format eBook *.pdf</p>
+                    <div class="upload">
+                      <progress value="0" max="100" id="uploader">0%</progress>
+                      <input type="file" value="upload" id="fileButton" />
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -629,6 +651,7 @@ Coded by www.creative-tim.com
   <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-storage.js"></script>
   <script src="../firebase/admin.js"></script>
   <!--   Core JS Files   -->
   <script src="assets/js/core/jquery.min.js"></script>

@@ -20,15 +20,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("admin_div").style.display = "block";
     document.getElementById("login_div").style.display = "none";
 
-    var user = firebase.auth().currentUser;
-
-    /*if(user != null){
-
-      var email_id = user.email;
-      document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
-
-    }*/
-
   } else {
     // No user is signed in.
 
@@ -58,3 +49,59 @@ function login(){
 function logout(){
   firebase.auth().signOut();
 }
+
+var uploader = document.getElementById('uploader');
+var fileButton = document.getElementById('fileButton');
+var metadata = {
+  contentType: 'application/pdf'
+};
+
+  fileButton.addEventListener('change', function(e) {
+    // File
+    var file = e.target.files[0];
+
+    // Buat Folder
+    var storageRef = firebase.storage().ref('eBook/' + file.name);
+
+    // Upload
+    var task = storageRef.put(file, metadata);
+
+    // Progres Upload
+    task.on('state_changed', 
+
+      function progress(snapshot) {
+        var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        uploader.value = percentage;
+      },
+
+      function error(err) {
+        // Reset
+        document.getElementById('uploadCV').reset();
+
+        uploader.value = '0';
+        // Alert 
+        document.querySelector('.alert-danger').style.display = 'block';
+
+        // Alert hilang selama 2.9 detik
+        setTimeout(function(){
+        document.querySelector('.alert-danger').style.display = 'none';},2900);
+      },
+
+      function complete() {
+        task.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+        window.alert('Copy URL:\n\n ' + downloadURL);
+        // Reset
+        document.getElementById('uploadCV').reset();
+
+        uploader.value = '0';
+        // Alert 
+        document.querySelector('.alert-success').style.display = 'block';
+
+        // Alert hilang selama 2.9 detik
+        setTimeout(function(){
+        document.querySelector('.alert-success').style.display = 'none';},2900);
+        });
+      }
+
+    );
+  });
