@@ -143,12 +143,12 @@ Coded by www.creative-tim.com
                 <div class="row">
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-app text-primary"></i>
+                      <i class="nc-icon nc-book-bookmark text-primary"></i>
                     </div>
                   </div>
                   <div class="col-7 col-md-8">
                     <div class="numbers">
-                      <p class="card-category">Portofolio</p>
+                      <p class="card-category">Buku</p>
                       <p class="card-title">2<p>
                     </div>
                   </div>
@@ -558,36 +558,39 @@ Coded by www.creative-tim.com
 
       <!-- MENU PORTOFOLIO -->
         <div class="tab-pane fade" id="v-pills-cv" role="tabpanel" aria-labelledby="v-pills-cv-tab">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-header">
-                  <h5 class="card-title">Upload eBook :</h5>
-                </div>
-                <div class="card-body">
-                  <div class="alert alert-success alert-with-icon alert-dismissible fade show" data-notify="container">
-                    <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="nc-icon nc-simple-remove"></i>
-                    </button>
-                    <span data-notify="icon" class="nc-icon nc-bell-55"></span>
-                    <span data-notify="message"><b> Hoorayy - </b>
-                    File kamu telah diupload : )</span>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Upload eBook :</h5>
                   </div>
-                  <div class="alert alert-danger alert-with-icon alert-dismissible fade show" data-notify="container">
-                    <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="nc-icon nc-simple-remove"></i>
-                    </button>
-                    <span data-notify="icon" class="nc-icon nc-bell-55"></span>
-                    <span data-notify="message"><b> Oops - </b>
-                    Terjadi masalah saat upload : (</span>
-                  </div>
-                  <form id="uploadCV">
+                  <div class="card-body">
                     <p><b>Note:</b> Pastikan format eBook *.pdf</p>
-                    <div class="upload">
-                      <progress value="0" max="100" id="uploader">0%</progress>
-                      <input type="file" value="upload" id="fileButton" />
+                    <div class="alert alert-success alert-with-icon alert-dismissible fade show" data-notify="container">
+                      <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+                        <i class="nc-icon nc-simple-remove"></i>
+                      </button>
+                      <span data-notify="icon" class="nc-icon nc-bell-55"></span>
+                      <span data-notify="message"><b> Hoorayy - </b>
+                      File kamu telah diupload : )</span>
                     </div>
-                  </form>
+                    <div class="alert alert-danger alert-with-icon alert-dismissible fade show" data-notify="container">
+                      <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+                        <i class="nc-icon nc-simple-remove"></i>
+                      </button>
+                      <span data-notify="icon" class="nc-icon nc-bell-55"></span>
+                      <span data-notify="message"><b> Oops - </b>
+                      Terjadi masalah saat upload : (</span>
+                    </div>
+                    <form id="uploadCV">    
+                      <div class="upload">
+                        <progress value="0" max="100" id="uploader">0%</progress>
+                        <input type="file" value="upload" id="fileButton" hidden/>
+                        <label for="fileButton">Klik!</label>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>

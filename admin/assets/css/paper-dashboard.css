@@ -45,12 +45,13 @@ Copyright (c) 2015 Daniel Eden
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-size: 14px;
 }
 
 #uploader {
   -webkit-appearance: none;
   appearance: none;
-  width: 60%;
+  width: 70%;
   margin-bottom: 10px;
 }
 
@@ -3720,7 +3721,7 @@ License - nucleoapp.com/license/
     font-weight: 500;
     padding-bottom: 15px; }
   .card label {
-    font-size: 0.8571em;
+    font-size: 1.2221em;
     margin-bottom: 5px;
     color: #9A9A9A; }
   .card .card-footer {
