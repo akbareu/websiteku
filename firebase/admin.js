@@ -70,8 +70,7 @@ function logout(){
               // console.log(hp, nama, pesan, subjek);
               var li = document.createElement('li');
               li.classList.add("list-group-item", "list-group-item-action", "flex-column", "align-items-start");
-              var pesan = document.createTextNode('<div class="d-flex w-100 justify-content-between"><h5 class="mb-1">',subjek,'</h5></div><p class="mb-1">',pesan,'</p><small>',hp,'</small><br><small>',nama,'</small>');
-              li.appendChild(pesan);
+              li.innerHTML = '<div class="d-flex w-100 justify-content-between"><h5 class="mb-1">' + subjek + '</h5></div><p class="mb-1">' + pesan + '</p><small>' + hp + '</small><br><small>' + nama + '</small>';
               document.getElementById("messageList").appendChild(li);
               
           }
