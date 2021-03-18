@@ -12,6 +12,7 @@
     // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   database = firebase.database();
+  storage = firebase.storage();
 
 
 // LOGIN SCRIPT
@@ -138,4 +139,33 @@ function logout(){
 
       );
     });
+
+  // INBOX SCRIPT
+  var ref = storage.ref('messages');
+  ref.on('value', gotData, errData);
+
+      function gotData(data) {
+        var messages = data.val();
+        var keys = Object.keys(messages);
+          console.log(keys);
+          for (var i = 0; i < keys.length; i++) {
+            var k = keys[i];
+            var hp     = messages[k].hp;
+            var nama   = messages[k].nama;
+            var pesan  = messages[k].pesan;
+            var subjek = messages[k].subjek;
+              // console.log(hp, nama, pesan, subjek);
+              var li = document.createElement('li');
+              li.classList.add("list-group-item", "list-group-item-action", "flex-column", "align-items-start");
+              li.innerHTML = '<div class="d-flex w-100 justify-content-between"><h5 class="mb-1">' + subjek + '</h5></div><p class="mb-1">' + pesan + '</p><small>' + hp + '</small><br><small>' + nama + '</small>';
+              document.getElementById("messageList").appendChild(li);
+              
+          }
+      }
+
+      function errData(err) {
+        console.log('Errors');
+        console.log(err);
+      }
+
 // END EBOOK SCRIPT
