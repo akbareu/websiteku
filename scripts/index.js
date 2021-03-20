@@ -1,16 +1,16 @@
-// Connect firebase 
-	var firebaseConfig = {
-	    apiKey: "AIzaSyBqbtFHnLGBEG1Y3CwWLleLBCeZtDOPpHU",
-	    authDomain: "akbareuu.firebaseapp.com",
-	    databaseURL: "https://akbareuu-default-rtdb.firebaseio.com",
-	    projectId: "akbareuu",
-	    storageBucket: "akbareuu.appspot.com",
-	    messagingSenderId: "514507179273",
-	    appId: "1:514507179273:web:65de833d510acf87223fd8",
-	    measurementId: "G-EMZ5S4L8GF"
-	  };
-	  // Initialize Firebase
-	firebase.initializeApp(firebaseConfig);
+// // Connect firebase 
+// 	var firebaseConfig = {
+// 	    apiKey: "AIzaSyBqbtFHnLGBEG1Y3CwWLleLBCeZtDOPpHU",
+// 	    authDomain: "akbareuu.firebaseapp.com",
+// 	    databaseURL: "https://akbareuu-default-rtdb.firebaseio.com",
+// 	    projectId: "akbareuu",
+// 	    storageBucket: "akbareuu.appspot.com",
+// 	    messagingSenderId: "514507179273",
+// 	    appId: "1:514507179273:web:65de833d510acf87223fd8",
+// 	    measurementId: "G-EMZ5S4L8GF"
+// 	  };
+// 	  // Initialize Firebase
+// 	firebase.initializeApp(firebaseConfig);
 
 // Ref pesan
 var pesanRef = firebase.database().ref('messages');

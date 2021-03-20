@@ -28,7 +28,7 @@ Copyright (c) 2015 Daniel Eden
   max-width: 600px;
   height: 320px;
   border: 1px solid #9C9C9C;
-  background-color: #EAEAEA;
+  background-color: #8c7ae6;
 }
 #login .container #login-row #login-column #login-box #login-form {
   padding: 20px;
@@ -457,36 +457,36 @@ Copyright (c) 2015 Daniel Eden
     top: 1px; }
 
 .btn-primary {
-  background-color: #51cbce;
+  background-color: #8c7ae6;
   color: #FFFFFF; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary.active:focus, .btn-primary.active:hover,
   .show > .btn-primary.dropdown-toggle,
   .show > .btn-primary.dropdown-toggle:focus,
   .show > .btn-primary.dropdown-toggle:hover {
-    background-color: #34b5b8 !important;
+    background-color: #674fde!important;
     color: #FFFFFF !important;
     box-shadow: none !important; }
   .btn-primary:not([data-action]):hover {
     box-shadow: none; }
-  .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary:disabled, .btn-primary:disabled:hover, .btn-primary:disabled:focus, .btn-primary:disabled.focus, .btn-primary:disabled:active, .btn-primary:disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active,
+  .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-h.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary:disabled, .btn-primary:disabled:hover, .btn-:disabled:focus, .btn-primary:disabled.focus, .btn-primary:disabled:active, .btn-primary:disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active,
   fieldset[disabled] .btn-primary,
   fieldset[disabled] .btn-primary:hover,
   fieldset[disabled] .btn-primary:focus,
   fieldset[disabled] .btn-primary.focus,
   fieldset[disabled] .btn-primary:active,
   fieldset[disabled] .btn-primary.active {
-    background-color: #51cbce;
-    border-color: #51cbce; }
+    background-color: #8c7ae6;
+    border-color: #8c7ae6; }
   .btn-primary.btn-simple {
-    color: #51cbce;
-    border-color: #51cbce; }
+    color: #8c7ae6;
+    border-color: #8c7ae6; }
     .btn-primary.btn-simple:hover, .btn-primary.btn-simple:focus, .btn-primary.btn-simple:active {
       background-color: transparent;
       color: #34b5b8;
       border-color: #34b5b8;
       box-shadow: none; }
   .btn-primary.btn-link {
-    color: #51cbce; }
+    color: #8c7ae6; }
     .btn-primary.btn-link:hover, .btn-primary.btn-link:focus, .btn-primary.btn-link:active, .btn-primary.btn-link:active:focus {
       background-color: transparent;
       color: #34b5b8;
@@ -531,13 +531,13 @@ Copyright (c) 2015 Daniel Eden
       box-shadow: none; }
 
 .btn-info {
-  background-color: #51bcda;
+  background-color: #8c7ae6;
   color: #FFFFFF; }
   .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .btn-info:active:focus, .btn-info:active:hover, .btn-info.active:focus, .btn-info.active:hover,
   .show > .btn-info.dropdown-toggle,
   .show > .btn-info.dropdown-toggle:focus,
   .show > .btn-info.dropdown-toggle:hover {
-    background-color: #2ba9cd !important;
+    background-color: #8c7ae6 !important;
     color: #FFFFFF !important;
     box-shadow: none !important; }
   .btn-info:not([data-action]):hover {
@@ -549,21 +549,21 @@ Copyright (c) 2015 Daniel Eden
   fieldset[disabled] .btn-info.focus,
   fieldset[disabled] .btn-info:active,
   fieldset[disabled] .btn-info.active {
-    background-color: #51bcda;
-    border-color: #51bcda; }
+    background-color: #8c7ae6;
+    border-color: #8c7ae6; }
   .btn-info.btn-simple {
-    color: #51bcda;
-    border-color: #51bcda; }
+    color: #8c7ae6;
+    border-color: #8c7ae6; }
     .btn-info.btn-simple:hover, .btn-info.btn-simple:focus, .btn-info.btn-simple:active {
       background-color: transparent;
-      color: #2ba9cd;
-      border-color: #2ba9cd;
+      color: #8c7ae6;
+      border-color: #8c7ae6;
       box-shadow: none; }
   .btn-info.btn-link {
-    color: #51bcda; }
+    color: #8c7ae6; }
     .btn-info.btn-link:hover, .btn-info.btn-link:focus, .btn-info.btn-link:active, .btn-info.btn-link:active:focus {
       background-color: transparent;
-      color: #2ba9cd;
+      color: #8c7ae6;
       text-decoration: none;
       box-shadow: none; }
 
@@ -669,15 +669,15 @@ Copyright (c) 2015 Daniel Eden
 
 .btn-outline-primary {
   background: transparent;
-  border: 2px solid #51cbce !important;
-  color: #51cbce;
+  border: 2px solid #8c7ae6 !important;
+  color: #8c7ae6;
   opacity: 1;
   filter: alpha(opacity=100); }
   .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary:focus:active, .btn-outline-primary.active,
   .open > .btn-outline-primary.dropdown-toggle {
-    background-color: #51cbce !important;
+    background-color: #8c7ae6 !important;
     color: rgba(255, 255, 255, 0.8) !important;
-    border-color: #51cbce !important; }
+    border-color: #8c7ae6 !important; }
     .btn-outline-primary:hover .caret, .btn-outline-primary:focus .caret, .btn-outline-primary:active .caret, .btn-outline-primary:focus:active .caret, .btn-outline-primary.active .caret,
     .open > .btn-outline-primary.dropdown-toggle .caret {
       border-top-color: rgba(255, 255, 255, 0.8) !important; }
@@ -691,7 +691,7 @@ Copyright (c) 2015 Daniel Eden
   fieldset[disabled] .btn-outline-primary:active,
   fieldset[disabled] .btn-outline-primary.active {
     background-color: transparent !important;
-    border-color: #51cbce !important; }
+    border-color: #8c7ae6 !important; }
 
 .btn-outline-success {
   background: transparent;
@@ -721,15 +721,15 @@ Copyright (c) 2015 Daniel Eden
 
 .btn-outline-info {
   background: transparent;
-  border: 2px solid #51bcda !important;
-  color: #51bcda;
+  border: 2px solid #8c7ae6 !important;
+  color: #8c7ae6;
   opacity: 1;
   filter: alpha(opacity=100); }
   .btn-outline-info:hover, .btn-outline-info:focus, .btn-outline-info:active, .btn-outline-info:focus:active, .btn-outline-info.active,
   .open > .btn-outline-info.dropdown-toggle {
-    background-color: #51bcda !important;
+    background-color: #8c7ae6 !important;
     color: rgba(255, 255, 255, 0.8) !important;
-    border-color: #51bcda !important; }
+    border-color: #8c7ae6 !important; }
     .btn-outline-info:hover .caret, .btn-outline-info:focus .caret, .btn-outline-info:active .caret, .btn-outline-info:focus:active .caret, .btn-outline-info.active .caret,
     .open > .btn-outline-info.dropdown-toggle .caret {
       border-top-color: rgba(255, 255, 255, 0.8) !important; }
@@ -743,7 +743,7 @@ Copyright (c) 2015 Daniel Eden
   fieldset[disabled] .btn-outline-info:active,
   fieldset[disabled] .btn-outline-info.active {
     background-color: transparent !important;
-    border-color: #51bcda !important; }
+    border-color: #8c7ae6 !important; }
 
 .btn-outline-warning {
   background: transparent;
@@ -828,7 +828,7 @@ Copyright (c) 2015 Daniel Eden
 
 .btn-neutral {
   background-color: #FFFFFF;
-  color: #51cbce;
+  color: #8c7ae6;
   color: #66615B; }
   .btn-neutral:hover, .btn-neutral:focus, .btn-neutral:active, .btn-neutral.active, .btn-neutral:active:focus, .btn-neutral:active:hover, .btn-neutral.active:focus, .btn-neutral.active:hover,
   .show > .btn-neutral.dropdown-toggle,
@@ -853,9 +853,9 @@ Copyright (c) 2015 Daniel Eden
     .btn-neutral.btn-danger:hover, .btn-neutral.btn-danger:focus, .btn-neutral.btn-danger:active, .btn-neutral.btn-danger:active:focus {
       color: #eb6532 !important; }
   .btn-neutral.btn-info {
-    color: #51bcda !important; }
+    color: #8c7ae6 !important; }
     .btn-neutral.btn-info:hover, .btn-neutral.btn-info:focus, .btn-neutral.btn-info:active, .btn-neutral.btn-info:active:focus {
-      color: #2ba9cd !important; }
+      color: #8c7ae6 !important; }
   .btn-neutral.btn-warning {
     color: #fbc658 !important; }
     .btn-neutral.btn-warning:hover, .btn-neutral.btn-warning:focus, .btn-neutral.btn-warning:active, .btn-neutral.btn-warning:active:focus {
@@ -873,10 +873,10 @@ Copyright (c) 2015 Daniel Eden
   .show > .btn-neutral.dropdown-toggle:focus,
   .show > .btn-neutral.dropdown-toggle:hover {
     background-color: #FFFFFF !important;
-    color: #34b5b8 !important;
+    color: #674fde!important;
     box-shadow: none !important; }
   .btn-neutral:hover, .btn-neutral:focus {
-    color: #34b5b8 !important; }
+    color: #674fde!important; }
     .btn-neutral:hover:not(.nav-link), .btn-neutral:focus:not(.nav-link) {
       box-shadow: none; }
   .btn-neutral.btn-simple {
@@ -993,7 +993,7 @@ fieldset[disabled]
   margin-left: -3px; }
 
 .btn-group .btn:focus {
-  background-color: #51bcda !important; }
+  background-color: #8c7ae6 !important; }
 
 .btn-round {
   border-width: 1px;
@@ -1406,9 +1406,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400; }
 
 a {
-  color: #51cbce; }
+  color: #8c7ae6; }
   a:hover, a:focus {
-    color: #51cbce; }
+    color: #8c7ae6; }
 
 h1, .h1 {
   font-size: 3.5em;
@@ -1480,11 +1480,11 @@ p.description {
 
 .text-primary,
 a.text-primary:focus, a.text-primary:hover {
-  color: #51cbce !important; }
+  color: #8c7ae6 !important; }
 
 .text-info,
 a.text-info:focus, a.text-info:hover {
-  color: #51bcda !important; }
+  color: #8c7ae6 !important; }
 
 .text-success,
 a.text-success:focus, a.text-success:hover {
@@ -1513,10 +1513,10 @@ a.text-gray:focus, a.text-gray:hover {
     font-size: 0.8571em;
     text-transform: uppercase; }
   .blockquote.blockquote-primary {
-    border-color: #51cbce;
-    color: #51cbce; }
+    border-color: #8c7ae6;
+    color: #8c7ae6; }
     .blockquote.blockquote-primary small {
-      color: #51cbce; }
+      color: #8c7ae6; }
   .blockquote.blockquote-danger {
     border-color: #ef8157;
     color: #ef8157; }
@@ -1646,12 +1646,12 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   background-color: #66615B; }
 
 .badge.badge-primary {
-  border-color: #51cbce;
-  background-color: #51cbce; }
+  border-color: #8c7ae6;
+  background-color: #8c7ae6; }
 
 .badge.badge-info {
-  border-color: #51bcda;
-  background-color: #51bcda; }
+  border-color: #8c7ae6;
+  background-color: #8c7ae6; }
 
 .badge.badge-success {
   border-color: #6bd098;
@@ -1951,7 +1951,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
     .navbar.navbar-transparent .nav-item .nav-link:not(.btn):hover,
     .navbar.navbar-transparent .nav-item .nav-link:not(.btn):focus:hover,
     .navbar.navbar-transparent .nav-item .nav-link:not(.btn):active {
-      color: #51cbce; }
+      color: #8c7ae6; }
   .navbar.bg-white a:not(.dropdown-item):not(.btn) {
     color: #66615B; }
     .navbar.bg-white a:not(.dropdown-item):not(.btn).disabled {
@@ -1963,7 +1963,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   .navbar.bg-white .nav-item .nav-link:not(.btn):focus,
   .navbar.bg-white .nav-item .nav-link:not(.btn):hover,
   .navbar.bg-white .nav-item .nav-link:not(.btn):active {
-    color: #51bcda; }
+    color: #8c7ae6; }
   .navbar.bg-white .logo-container {
     border: 1px solid #66615B; }
   .navbar .navbar-collapse .nav-item a {
@@ -1973,10 +1973,10 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   background-color: #66615B !important; }
 
 .bg-primary {
-  background-color: #51cbce !important; }
+  background-color: #8c7ae6 !important; }
 
 .bg-info {
-  background-color: #51bcda !important; }
+  background-color: #8c7ae6 !important; }
 
 .bg-success {
   background-color: #6bd098 !important; }
@@ -2424,7 +2424,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   .alert.alert-info {
     background-color: #66c4de; }
   .alert.alert-primary {
-    background-color: #65d1d4; }
+    background-color: #8c7ae6; }
   .alert.alert-default {
     background-color: #736e67; }
   .alert .close {
@@ -3287,7 +3287,7 @@ License - nucleoapp.com/license/
   .off-canvas-sidebar[data-active-color="primary"] .nav li.active > a[data-toggle="collapse"] i,
   .off-canvas-sidebar[data-active-color="primary"] .nav li.active > a[data-toggle="collapse"] ~ div > ul > li.active .sidebar-mini-icon,
   .off-canvas-sidebar[data-active-color="primary"] .nav li.active > a[data-toggle="collapse"] ~ div > ul > li.active > a {
-    color: #51cbce;
+    color: #8c7ae6;
     opacity: 1; }
   .sidebar[data-active-color="info"] .nav li.active > a,
   .sidebar[data-active-color="info"] .nav li.active > a i,
@@ -3301,7 +3301,7 @@ License - nucleoapp.com/license/
   .off-canvas-sidebar[data-active-color="info"] .nav li.active > a[data-toggle="collapse"] i,
   .off-canvas-sidebar[data-active-color="info"] .nav li.active > a[data-toggle="collapse"] ~ div > ul > li.active .sidebar-mini-icon,
   .off-canvas-sidebar[data-active-color="info"] .nav li.active > a[data-toggle="collapse"] ~ div > ul > li.active > a {
-    color: #51bcda;
+    color: #8c7ae6;
     opacity: 1; }
   .sidebar[data-active-color="success"] .nav li.active > a,
   .sidebar[data-active-color="success"] .nav li.active > a i,
@@ -3517,11 +3517,11 @@ License - nucleoapp.com/license/
   .fixed-plugin .badge:hover {
     border-color: #00bbff; }
   .fixed-plugin .badge-blue {
-    background-color: #51bcda; }
+    background-color: #8c7ae6; }
   .fixed-plugin .badge-green {
     background-color: #6bd098; }
   .fixed-plugin .badge-orange {
-    background-color: #51cbce; }
+    background-color: #8c7ae6; }
   .fixed-plugin .badge-yellow {
     background-color: #fbc658; }
   .fixed-plugin .badge-red {
@@ -3690,9 +3690,9 @@ License - nucleoapp.com/license/
     .card .map.map-big {
       height: 500px; }
   .card[data-background-color="orange"] {
-    background-color: #51cbce; }
+    background-color: #8c7ae6; }
     .card[data-background-color="orange"] .card-header {
-      background-color: #51cbce; }
+      background-color: #8c7ae6; }
     .card[data-background-color="orange"] .card-footer .stats {
       color: #FFFFFF; }
   .card[data-background-color="red"] {
@@ -3700,7 +3700,7 @@ License - nucleoapp.com/license/
   .card[data-background-color="yellow"] {
     background-color: #fbc658; }
   .card[data-background-color="blue"] {
-    background-color: #51bcda; }
+    background-color: #8c7ae6; }
   .card[data-background-color="green"] {
     background-color: #6bd098; }
   .card .image {
@@ -3908,7 +3908,7 @@ License - nucleoapp.com/license/
     width: 22px;
     height: 1px;
     border-radius: 1px;
-    background: #66615B; }
+    background: #674fde; }
     .navbar .navbar-toggler-bar + .navbar-toggler-bar {
       margin-top: 7px; }
     .navbar .navbar-toggler-bar + .navbar-toggler-bar.navbar-kebab {
