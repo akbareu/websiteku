@@ -71,12 +71,16 @@ function logout(){
               // console.log(hp, nama, pesan, subjek);
               var li = document.createElement('li');
               // li.classList.add("list-group-item", "list-group-item-action", "flex-column", "align-items-start");
-              li.innerHTML = '<div class="typhography-line"><blockquote><p class="mb-1 blockquote blockquote-primary"><strong>' + subjek + '</strong><br>' + pesan + '<br><br><small>- ' + nama + '</small>' + '<small> (' + hp + ') </small><br></p></blockquote></div>';
+              li.innerHTML = '<div class="typhography-line"><blockquote><p class="mb-1 blockquote blockquote-primary"><strong>' + subjek + '</strong><br>' + pesan + '<br><br><small>- ' + nama + '</small>' + '<small> (' + hp + ') </small><br><button id="' + k +'" class="btn btn-danger btn-rounded delete-message">Delete</button</p></blockquote></div>';
               document.getElementById("messageList").appendChild(li);
-              
           }
+          $(document).on("click", ".delete-message", function(){
+            console.log("Clicked");
+              database.ref("messages/" + k ).remove();
+          });
       }
 
+      
       function errData(err) {
         console.log('Errors');
         console.log(err);
