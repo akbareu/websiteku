@@ -12,25 +12,20 @@
 // 	  // Initialize Firebase
 // 	firebase.initializeApp(firebaseConfig);
 
-// Ref pesan
-var pesanRef = firebase.database().ref('messages');
+var database = firebase.database();
 
+$("#kirimPesan").click(function(){
 
-// Listener form 
-document.getElementById('hubungiForm').addEventListener('submit', submitForm);
-
-// Form Submit
-function submitForm(e) {
-	e.preventDefault();
-
-	var nama = getInputVal('nama');
-	var subjek = getInputVal('subjek');
-	var hp = getInputVal('hp');
-	var pesan = getInputVal('pesan');
-
-	// Save pesan ke database
-	saveMessage(nama, subjek, hp, pesan);
-
+	// Ambil nilai inputan
+	var message = {
+		id: 	$("#nama").val() + Date.now(),
+		nama: 	$("#nama").val(),
+		subjek: $("#subjek").val(),
+		hp: 	$("#hp").val(),
+		pesan: 	$("#pesan").val()
+	}
+	inputDatabase(message);
+	
 	// Alert jempol
 	document.querySelector('.alert').style.display = 'block';
 
@@ -41,20 +36,9 @@ function submitForm(e) {
 
 	// Bersihkan formulir setelah submit
 	document.getElementById('hubungiForm').reset();
-}
 
-// Fungsi ambil nilai formulir
-function getInputVal(id) {
-	return document.getElementById(id).value;
-}
+});
 
-// Save pesan ke database
-function saveMessage(nama, subjek, hp, pesan) {
-	var newMessageRef = pesanRef.push();
-	newMessageRef.set({
-		nama: nama,
-		subjek: subjek,
-		hp: hp,
-		pesan: pesan
-	});
+function inputDatabase(m) {
+	database.ref("messages/" + m.id).set(m);
 }

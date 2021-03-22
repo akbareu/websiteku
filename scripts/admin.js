@@ -55,37 +55,32 @@ function logout(){
 // END LOGIN SCRIPT
 
 // INBOX SCRIPT
-  var messageData = database.ref('messages');
-  messageData.on('value', gotData, errData);
+  var inboxRef = database.ref().child("messages");
+    inboxRef.on("value",function(snapshot){
+    $("#show-inbox").empty();
+      var pesanHTMLitem = "<p><b>Note:</b> Pesan yang telah dihapus tidak bisa dikembalikan</p>";
+    snapshot.forEach(function(childsnapshot){
+      var inbox = childsnapshot.val();
+        pesanHTMLitem += "<div class='pesanHTMLitem'></hr><div class='typhography-line'>";
+        pesanHTMLitem += "<blockquote><p class='mb-1 blockquote blockquote-primary'";
+        pesanHTMLitem += "<strong>" + inbox.subjek + "</strong><br>";
+        pesanHTMLitem += inbox.pesan + "<br></br>";
+        pesanHTMLitem += "<small>- " + inbox.nama + "</small>";
+        pesanHTMLitem += "<small>(" + inbox.hp + ")</small><br>";
+        pesanHTMLitem += "<button type='button' class='btn btn-danger btn-rounded delete-message' id='" + inbox.id + "'>Delete</button>";
+        pesanHTMLitem += "</p></blockquote></div></div>";
+    });
+    $("#show-inbox").html(pesanHTMLitem);
+    $(document).on("click", ".delete-message", function(){
+      var inboxId = $(this).attr('id');
+      database.ref("messages/" + inboxId).remove();
+    });
+  });
 
-      function gotData(data) {
-        var messages = data.val();
-        var keys = Object.keys(messages);
-          console.log(keys);
-          for (var i = 0; i < keys.length; i++) {
-            var k = keys[i];
-            var hp     = messages[k].hp;
-            var nama   = messages[k].nama;
-            var pesan  = messages[k].pesan;
-            var subjek = messages[k].subjek;
-              // console.log(hp, nama, pesan, subjek);
-              var li = document.createElement('li');
-              // li.classList.add("list-group-item", "list-group-item-action", "flex-column", "align-items-start");
-              li.innerHTML = '<div class="typhography-line"><blockquote><p class="mb-1 blockquote blockquote-primary"><strong>' + subjek + '</strong><br>' + pesan + '<br><br><small>- ' + nama + '</small>' + '<small> (' + hp + ') </small><br><button id="' + k +'" class="btn btn-danger btn-rounded delete-message">Delete</button</p></blockquote></div>';
-              document.getElementById("messageList").appendChild(li);
-          }
-          $(document).on("click", ".delete-message", function(){
-            console.log("Clicked");
-              database.ref("messages/" + k ).remove();
-          });
-      }
 
-      
-      function errData(err) {
-        console.log('Errors');
-        console.log(err);
-      }
 // END INBOX SCRIPT
+
+// <div class="typhography-line"><blockquote><p class="mb-1 blockquote blockquote-primary"><strong>' + subjek + '</strong><br>' + pesan + '<br><br><small>- ' + nama + '</small>' + '<small> (' + hp + ') </small><br><button id="' + k +'" class="btn btn-danger btn-rounded delete-message">Delete</button</p></blockquote></div>
 
 // EBOOK STORE SCRIPT
   var uploader = document.getElementById('uploader');
