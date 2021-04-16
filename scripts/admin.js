@@ -1,4 +1,4 @@
-// // Connect firebase 
+// // Connect firebase
 //   var firebaseConfig = {
 //       apiKey: "AIzaSyBqbtFHnLGBEG1Y3CwWLleLBCeZtDOPpHU",
 //       authDomain: "akbareuu.firebaseapp.com",
@@ -11,8 +11,8 @@
 //     };
 //     // Initialize Firebase
 //   firebase.initializeApp(firebaseConfig);
-  database = firebase.database();
-  storage = firebase.storage();
+database = firebase.database();
+storage = firebase.storage();
 
 
 // LOGIN SCRIPT
@@ -32,108 +32,109 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-function login(){
+function login() {
 
   var userEmail = document.getElementById("inputEmail").value;
   var userPass = document.getElementById("inputPassword").value;
 
-  firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
+  firebase.auth().signInWithEmailAndPassword(userEmail,
+    userPass).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
 
-    window.alert("Error : " + errorMessage);
+      window.alert("Error : " + errorMessage);
 
-    // ...
-  });
+      // ...
+    });
 
 }
 
-function logout(){
+function logout() {
   firebase.auth().signOut();
 }
 // END LOGIN SCRIPT
 
 // INBOX SCRIPT
-  var inboxRef = database.ref().child("messages");
-    inboxRef.on("value",function(snapshot){
-    $("#show-inbox").empty();
-      var pesanHTMLitem = "<p><b>Note:</b> Pesan yang telah dihapus tidak bisa dikembalikan</p>";
-    snapshot.forEach(function(childsnapshot){
-      var inbox = childsnapshot.val();
-        pesanHTMLitem += "<div class='pesanHTMLitem'></hr><div class='typhography-line'>";
-        pesanHTMLitem += "<blockquote><p class='mb-1 blockquote blockquote-primary'";
-        pesanHTMLitem += "<strong>" + inbox.subjek + "</strong><br>";
-        pesanHTMLitem += inbox.pesan + "<br></br>";
-        pesanHTMLitem += "<small>- " + inbox.nama + "</small>";
-        pesanHTMLitem += "<small>(" + inbox.hp + ")</small><br>";
-        pesanHTMLitem += "<button type='button' class='btn btn-danger btn-rounded delete-message' id='" + inbox.id + "'>Delete</button>";
-        pesanHTMLitem += "</p></blockquote></div></div>";
-    });
-    $("#show-inbox").html(pesanHTMLitem);
-    $(document).on("click", ".delete-message", function(){
-      var inboxId = $(this).attr('id');
-      database.ref("messages/" + inboxId).remove();
-    });
+var inboxRef = database.ref().child("messages");
+inboxRef.on("value", function(snapshot) {
+  $("#show-inbox").empty();
+  var pesanHTMLitem = "<p><b>Note:</b> Pesan yang telah dihapus tidak bisa dikembalikan</p>";
+  snapshot.forEach(function(childsnapshot) {
+    var inbox = childsnapshot.val();
+    pesanHTMLitem += "<div class='pesanHTMLitem'></hr><div class='typhography-line'>";
+    pesanHTMLitem += "<blockquote><p class='mb-1 blockquote blockquote-primary'";
+    pesanHTMLitem += "<strong>" + inbox.subjek + "</strong><br>";
+    pesanHTMLitem += inbox.pesan + "<br></br>";
+    pesanHTMLitem += "<small>- " + inbox.nama + "</small>";
+    pesanHTMLitem += "<small>(" + inbox.hp + ")</small><br>";
+    pesanHTMLitem += "<button type='button' class='btn btn-danger btn-rounded delete-message' id='" + inbox.id + "'>Delete</button>";
+    pesanHTMLitem += "</p></blockquote></div></div>";
   });
+  $("#show-inbox").html(pesanHTMLitem);
+  $(document).on("click", ".delete-message", function() {
+    var inboxId = $(this).attr('id');
+    database.ref("messages/" + inboxId).remove();
+  });
+});
 
 
 // END INBOX SCRIPT
 
-// <div class="typhography-line"><blockquote><p class="mb-1 blockquote blockquote-primary"><strong>' + subjek + '</strong><br>' + pesan + '<br><br><small>- ' + nama + '</small>' + '<small> (' + hp + ') </small><br><button id="' + k +'" class="btn btn-danger btn-rounded delete-message">Delete</button</p></blockquote></div>
-
 // EBOOK STORE SCRIPT
-  var uploader = document.getElementById('uploader');
-  var fileButton = document.getElementById('fileButton');
+var uploader = document.getElementById('uploader');
+var fileButton = document.getElementById('fileButton');
 
-    fileButton.addEventListener('change', function(e) {
-      // File
-      var file = e.target.files[0];
+fileButton.addEventListener('change', function(e) {
+  // File
+  var file = e.target.files[0];
 
-      // Buat Folder
-      var storageRef = firebase.storage().ref('eBook/' + file.name);
+  // Buat Folder
+  var storageRef = firebase.storage().ref('eBook/' + file.name);
 
-      // Upload
-      var task = storageRef.put(file);
+  // Upload
+  var task = storageRef.put(file);
 
-      // Progres Upload
-      task.on('state_changed', 
+  // Progres Upload
+  task.on('state_changed',
 
-        function progress(snapshot) {
-          var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          uploader.value = percentage;
-        },
+    function progress(snapshot) {
+      var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+      uploader.value = percentage;
+    },
 
-        function error(err) {
-          // Reset
-          document.getElementById('uploadCV').reset();
+    function error(err) {
+      // Reset
+      document.getElementById('uploadBuku').reset();
 
-          uploader.value = '0';
-          // Alert 
-          document.querySelector('.alert-danger').style.display = 'block';
+      uploader.value = '0';
+      // Alert
+      document.querySelector('.alert-danger').style.display = 'block';
 
-          // Alert hilang selama 2.9 detik
-          setTimeout(function(){
-          document.querySelector('.alert-danger').style.display = 'none';},2900);
-        },
+      // Alert hilang selama 2.9 detik
+      setTimeout(function() {
+        document.querySelector('.alert-danger').style.display = 'none';
+      }, 2900);
+    },
 
-        function complete() {
-          task.snapshot.ref.getDownloadURL().then(function(downloadURL) {
-          window.alert('Copy URL:\n\n ' + downloadURL);
-          // Reset
-          document.getElementById('uploadCV').reset();
+    function complete() {
+      task.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+        window.alert('Copy URL:\n\n ' + downloadURL);
+        // Reset
+        document.getElementById('uploadBuku').reset();
 
-          uploader.value = '0';
-          // Alert 
-          document.querySelector('.alert-success').style.display = 'block';
+        uploader.value = '0';
+        // Alert
+        document.querySelector('.alert-success').style.display = 'block';
 
-          // Alert hilang selama 2.9 detik
-          setTimeout(function(){
-          document.querySelector('.alert-success').style.display = 'none';},2900);
-          });
-        }
+        // Alert hilang selama 2.9 detik
+        setTimeout(function() {
+          document.querySelector('.alert-success').style.display = 'none';
+        }, 2900);
+      });
+    }
 
-      );
-    });
+  );
+});
 
 // END EBOOK SCRIPT

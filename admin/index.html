@@ -10,7 +10,7 @@
     Dashboard
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-  
+
   <!-- CSS Files -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
@@ -22,421 +22,448 @@
 </head>
 
 <body>
-<div id="admin_div" style="display: none;">
-  <div class="wrapper animate-bottom">
+  <div id="admin_div" style="display: none;">
+    <div class="wrapper animate-bottom">
 
-    <!-- Sidenav START -->
-    <div class="sidebar" data-color="white" data-active-color="danger">
-      <div class="logo">
-        <a href="https://akbareuu.web.app" class="simple-text logo-mini">
-          <div class="logo-image-small">
-            <img src="assets/img/avatar.png">
-          </div>
-        </a>
-        <a href="https://akbareuu.web.app" class="simple-text logo-normal">
-          Akbar Maulana
-        </a>
-      </div>
-      <div class="nav sidebar-wrapper" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <ul class="nav">
-          <li>
-          <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
-            <i class="nc-icon nc-compass-05"></i>
-            <p>Dashboard</p>
+      <!-- Sidenav START -->
+      <div class="sidebar" data-color="white" data-active-color="danger">
+        <div class="logo">
+          <a href="https://akbareuu.web.app" class="simple-text logo-mini">
+            <div class="logo-image-small">
+              <img src="assets/img/avatar.png">
+            </div>
           </a>
-          </li>
-          <li>
-          <a class="nav-link" id="v-pills-certi-tab" data-toggle="pill" href="#v-pills-certi" role="tab" aria-controls="v-pills-certi" aria-selected="false">
-            <i class="nc-icon nc-hat-3"></i>
-            <p>Certificates</p>
+          <a href="https://akbareuu.web.app" class="simple-text logo-normal">
+            Akbar Maulana
           </a>
-          </li>
-          <li>
-          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
-            <i class="nc-icon nc-email-85"></i>
-            <p>Messages</p>
-          </a>
-          </li>
-          <li>
-          <a class="nav-link" id="v-pills-cv-tab" data-toggle="pill" href="#v-pills-cv" role="tab" aria-controls="v-pills-cv" aria-selected="false">
-            <i class="nc-icon nc-book-bookmark"></i>
-            <p>E-Book</p>
-          </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- Sidenav END -->
-
-    <div class="main-panel">
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
-        <div class="container-fluid">
-          <div class="navbar-wrapper">
-            <div class="navbar-toggle">
-              <button type="button" class="navbar-toggler">
-                <span class="navbar-toggler-bar bar1"></span>
-                <span class="navbar-toggler-bar bar2"></span>
-                <span class="navbar-toggler-bar bar3"></span>
-              </button>
-            </div>
-            <a class="navbar-brand" href="javascript:;">Administrator</a>
-          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navigation">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a onclick="logout()" class="nav-link btn-rotate" href="">
-                  <i class="nc-icon nc-button-power"></i>
-                  <p>
-                    <span class="d-lg-none d-md-block">Logout</span>
-                  </p>
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
-      </nav>
-      <!-- End Navbar -->
-
-
-  <!-- Sidenav Content START -->
-    <div class="content tab-content" id="v-pills-tabContent">
-      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-stats">
-              <div class="card-body ">
-                <div class="row">
-                  <div class="col-5 col-md-4">
-                    <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-book-bookmark text-primary"></i>
-                    </div>
-                  </div>
-                  <div class="col-7 col-md-8">
-                    <div class="numbers">
-                      <p class="card-category">eBook</p>
-                      <p class="card-title">2<p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer ">
-                <hr>
-                <div class="stats">
-                  <i class="nc-icon nc-cloud-upload-94"></i>
-                  Published
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-stats">
-              <div class="card-body ">
-                <div class="row">
-                  <div class="col-5 col-md-4">
-                    <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-world-2 text-success"></i>
-                    </div>
-                  </div>
-                  <div class="col-7 col-md-8">
-                    <div class="numbers">
-                      <p class="card-category">Visitors</p>
-                      <p class="card-title">139<p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer ">
-                <hr>
-                <div class="stats">
-                  <i class="nc-icon nc-paper"></i>
-                  Counted
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-stats">
-              <div class="card-body ">
-                <div class="row">
-                  <div class="col-5 col-md-4">
-                    <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-email-85 text-warning"></i>
-                    </div>
-                  </div>
-                  <div class="col-7 col-md-8">
-                    <div class="numbers">
-                      <p class="card-category">Messages</p>
-                      <p class="card-title">23<p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer ">
-                <hr>
-                <div class="stats">
-                  <i class="nc-icon nc-box"></i>
-                  Inbox
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-stats">
-              <div class="card-body ">
-                <div class="row">
-                  <div class="col-5 col-md-4">
-                    <div class="icon-big text-center icon-warning">
-                      <i class="fa fa-instagram text-danger"></i>
-                    </div>
-                  </div>
-                  <div class="col-7 col-md-8">
-                    <div class="numbers">
-                      <p class="card-category">Followers</p>
-                      <p class="card-title">+45K<p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer ">
-                <hr>
-                <div class="stats">
-                  <i class="nc-icon nc-paper"></i>
-                  Counted
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card ">
-              <div class="card-header ">
-                <h5 class="card-title"></h5>
-                <p class="card-category">24 Hours performance</p>
-              </div>
-              <div class="card-body ">
-                <canvas id=chartHours width="400" height="100"></canvas>
-              </div>
-              <div class="card-footer ">
-                <hr>
-                <div class="stats">
-                  <i class="fa fa-history"></i> Updated 3 minutes ago
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card ">
-              <div class="card-header ">
-                <h5 class="card-title">Email Statistics</h5>
-                <p class="card-category">Last Campaign Performance</p>
-              </div>
-              <div class="card-body ">
-                <canvas id="chartEmail"></canvas>
-              </div>
-              <div class="card-footer ">
-                <div class="legend">
-                  <i class="fa fa-circle text-primary"></i> Opened
-                  <i class="fa fa-circle text-warning"></i> Read
-                  <i class="fa fa-circle text-danger"></i> Deleted
-                  <i class="fa fa-circle text-gray"></i> Unopened
-                </div>
-                <hr>
-                <div class="stats">
-                  <i class="fa fa-calendar"></i> Number of emails sent
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="card card-chart">
-              <div class="card-header">
-                <h5 class="card-title">NASDAQ: AAPL</h5>
-                <p class="card-category">Line Chart with Points</p>
-              </div>
-              <div class="card-body">
-                <canvas id="speedChart" width="400" height="100"></canvas>
-              </div>
-              <div class="card-footer">
-                <div class="chart-legend">
-                  <i class="fa fa-circle text-info"></i> Tesla Model S
-                  <i class="fa fa-circle text-warning"></i> BMW 5 Series
-                </div>
-                <hr />
-                <div class="card-stats">
-                  <i class="fa fa-check"></i> Data information certified
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="nav sidebar-wrapper" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <ul class="nav">
+            <li>
+              <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                <i class="nc-icon nc-compass-05"></i>
+                <p>
+                  Dashboard
+                </p>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" id="v-pills-certi-tab" data-toggle="pill" href="#v-pills-certi" role="tab" aria-controls="v-pills-certi" aria-selected="false">
+                <i class="nc-icon nc-hat-3"></i>
+                <p>
+                  Certificates
+                </p>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                <i class="nc-icon nc-email-85"></i>
+                <p>
+                  Messages
+                </p>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" id="v-pills-cv-tab" data-toggle="pill" href="#v-pills-cv" role="tab" aria-controls="v-pills-cv" aria-selected="false">
+                <i class="nc-icon nc-book-bookmark"></i>
+                <p>
+                  E-Book
+                </p>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
+      <!-- Sidenav END -->
 
-    <!-- MENU CERTIFICATES (Sertifikat) -->
-    <div class="tab-pane fade" id="v-pills-certi" role="tabpanel" aria-labelledby="v-pills-certi-tab">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-header">
-              <h4 class="card-title">Certificates</h4>
-            </div>
-            <div class="card-body">
-              <button class="btn btn-primary btn-block" onclick="demo.showNotification('top','right')">Top Right</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MENU INBOX (PESAN MASUK) -->
-      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card">
-              <div class="card-header">
-                <h4 class="card-title">Messages</h4>
+      <div class="main-panel">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+          <div class="container-fluid">
+            <div class="navbar-wrapper">
+              <div class="navbar-toggle">
+                <button type="button" class="navbar-toggler">
+                  <span class="navbar-toggler-bar bar1"></span>
+                  <span class="navbar-toggler-bar bar2"></span>
+                  <span class="navbar-toggler-bar bar3"></span>
+                </button>
               </div>
-              <div class="card-body" id="show-inbox">
-                
-              </div>
+              <a class="navbar-brand" href="javascript:;">Administrator</a>
             </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- MENU PORTOFOLIO -->
-        <div class="tab-pane fade" id="v-pills-cv" role="tabpanel" aria-labelledby="v-pills-cv-tab">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="card-header">
-                    <h5 class="card-title">Upload eBook :</h5>
-                  </div>
-                  <div class="card-body">
-                    <p><b>Note:</b> Pastikan format eBook *.pdf</p>
-                    <div class="alert alert-success alert-with-icon alert-dismissible fade show" data-notify="container">
-                      <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-                        <i class="nc-icon nc-simple-remove"></i>
-                      </button>
-                      <span data-notify="icon" class="nc-icon nc-bell-55"></span>
-                      <span data-notify="message"><b> Hoorayy - </b>
-                      File kamu telah diupload : )</span>
-                    </div>
-                    <div class="alert alert-danger alert-with-icon alert-dismissible fade show" data-notify="container">
-                      <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-                        <i class="nc-icon nc-simple-remove"></i>
-                      </button>
-                      <span data-notify="icon" class="nc-icon nc-bell-55"></span>
-                      <span data-notify="message"><b> Oops - </b>
-                      Terjadi masalah saat upload : (</span>
-                    </div>
-                    <form id="uploadCV">    
-                      <div class="upload">
-                        <progress value="0" max="100" id="uploader">0%</progress>
-                        <input type="file" value="upload" id="fileButton" hidden/>
-                        <label for="fileButton">Klik!</label>
-                      </div>
-                    </form>
-                    <ul class="list-group" id="ebookList">
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-    </div>
-    <!-- Sidenav END -->
-
-      <footer class="footer footer-black  footer-white ">
-        <div class="container-fluid">
-          <div class="row">
-            <nav class="footer-nav">
-              <ul>
-                <li>
-                  <a href="https://github.com/creativetimofficial/paper-dashboard" target="_blank">Paper Dashboard</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-bar navbar-kebab"></span>
+              <span class="navbar-toggler-bar navbar-kebab"></span>
+              <span class="navbar-toggler-bar navbar-kebab"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navigation">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a onclick="logout()" class="nav-link btn-rotate" href="">
+                    <i class="nc-icon nc-button-power"></i>
+                    <p>
+                      <span class="d-lg-none d-md-block">Logout</span>
+                    </p>
+                  </a>
                 </li>
               </ul>
-            </nav>
-            <div class="credits ml-auto">
-              <span class="copyright">
-                © <script>
-                  document.write(new Date().getFullYear())
-                </script>
-              </span>
             </div>
           </div>
-        </div>
-      </footer>
-    </div>
-  </div>
-</div>
-  <div id="login_div" style="display: none;">
-        <h3 class="text-center text-white pt-5">Login form</h3>
-        <div class="container">
-            <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-md-6">
-                    <div id="login-box" class="col-md-12">
-                        <div class="form">
-                            <h3 class="text-center text-info">Login</h3>
-                            <div class="form-group">
+        </nav>
+        <!-- End Navbar -->
+
+
+        <!-- Sidenav Content START -->
+        <div class="content tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                  <div class="card-body ">
+                    <div class="row">
+                      <div class="col-5 col-md-4">
+                        <div class="icon-big text-center icon-warning">
+                          <i class="nc-icon nc-book-bookmark text-primary"></i>
+                        </div>
+                      </div>
+                      <div class="col-7 col-md-8">
+                        <div class="numbers">
+                          <p class="card-category">
+                            eBook
+                          </p>
+                          <p class="card-title">
+                            2<p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-footer ">
+                        <hr>
+                        <div class="stats">
+                          <i class="nc-icon nc-cloud-upload-94"></i>
+                          Published
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                      <div class="card-body ">
+                        <div class="row">
+                          <div class="col-5 col-md-4">
+                            <div class="icon-big text-center icon-warning">
+                              <i class="nc-icon nc-world-2 text-success"></i>
+                            </div>
+                          </div>
+                          <div class="col-7 col-md-8">
+                            <div class="numbers">
+                              <p class="card-category">
+                                Visitors
+                              </p>
+                              <p class="card-title">
+                                139<p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-footer ">
+                            <hr>
+                            <div class="stats">
+                              <i class="nc-icon nc-paper"></i>
+                              Counted
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                          <div class="card-body ">
+                            <div class="row">
+                              <div class="col-5 col-md-4">
+                                <div class="icon-big text-center icon-warning">
+                                  <i class="nc-icon nc-email-85 text-warning"></i>
+                                </div>
+                              </div>
+                              <div class="col-7 col-md-8">
+                                <div class="numbers">
+                                  <p class="card-category">
+                                    Messages
+                                  </p>
+                                  <p class="card-title">
+                                    23<p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-footer ">
+                                <hr>
+                                <div class="stats">
+                                  <i class="nc-icon nc-box"></i>
+                                  Inbox
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                              <div class="card-body ">
+                                <div class="row">
+                                  <div class="col-5 col-md-4">
+                                    <div class="icon-big text-center icon-warning">
+                                      <i class="fa fa-instagram text-danger"></i>
+                                    </div>
+                                  </div>
+                                  <div class="col-7 col-md-8">
+                                    <div class="numbers">
+                                      <p class="card-category">
+                                        Followers
+                                      </p>
+                                      <p class="card-title">
+                                        +45K<p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-footer ">
+                                    <hr>
+                                    <div class="stats">
+                                      <i class="nc-icon nc-paper"></i>
+                                      Counted
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="card ">
+                                  <div class="card-header ">
+                                    <h5 class="card-title"></h5>
+                                    <p class="card-category">
+                                      24 Hours performance
+                                    </p>
+                                  </div>
+                                  <div class="card-body ">
+                                    <canvas id=chartHours width="400" height="100"></canvas>
+                                  </div>
+                                  <div class="card-footer ">
+                                    <hr>
+                                    <div class="stats">
+                                      <i class="fa fa-history"></i> Updated 3 minutes ago
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4">
+                                <div class="card ">
+                                  <div class="card-header ">
+                                    <h5 class="card-title">Email Statistics</h5>
+                                    <p class="card-category">
+                                      Last Campaign Performance
+                                    </p>
+                                  </div>
+                                  <div class="card-body ">
+                                    <canvas id="chartEmail"></canvas>
+                                  </div>
+                                  <div class="card-footer ">
+                                    <div class="legend">
+                                      <i class="fa fa-circle text-primary"></i> Opened
+                                      <i class="fa fa-circle text-warning"></i> Read
+                                      <i class="fa fa-circle text-danger"></i> Deleted
+                                      <i class="fa fa-circle text-gray"></i> Unopened
+                                    </div>
+                                    <hr>
+                                    <div class="stats">
+                                      <i class="fa fa-calendar"></i> Number of emails sent
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card card-chart">
+                                  <div class="card-header">
+                                    <h5 class="card-title">NASDAQ: AAPL</h5>
+                                    <p class="card-category">
+                                      Line Chart with Points
+                                    </p>
+                                  </div>
+                                  <div class="card-body">
+                                    <canvas id="speedChart" width="400" height="100"></canvas>
+                                  </div>
+                                  <div class="card-footer">
+                                    <div class="chart-legend">
+                                      <i class="fa fa-circle text-info"></i> Tesla Model S
+                                      <i class="fa fa-circle text-warning"></i> BMW 5 Series
+                                    </div>
+                                    <hr />
+                                    <div class="card-stats">
+                                      <i class="fa fa-check"></i> Data information certified
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- MENU CERTIFICATES (Sertifikat) -->
+                          <div class="tab-pane fade" id="v-pills-certi" role="tabpanel" aria-labelledby="v-pills-certi-tab">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="card">
+                                  <div class="card-header">
+                                    <h4 class="card-title">Certificates</h4>
+                                  </div>
+                                  <div class="card-body">
+                                    <button class="btn btn-primary btn-block" onclick="demo.showNotification('top','right')">Top Right</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- MENU INBOX (PESAN MASUK) -->
+                          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="card">
+                                  <div class="card-header">
+                                    <h4 class="card-title">Messages</h4>
+                                  </div>
+                                  <div class="card-body" id="show-inbox">
+
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <!-- MENU PORTOFOLIO -->
+                          <div class="tab-pane fade" id="v-pills-cv" role="tabpanel" aria-labelledby="v-pills-cv-tab">
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="card">
+                                    <div class="card-header">
+                                      <h5 class="card-title">Upload eBook :</h5>
+                                    </div>
+                                    <div class="card-body">
+                                      <p>
+                                        <b>Note:</b> Pastikan format eBook *.pdf
+                                      </p>
+                                      <div class="alert alert-success alert-with-icon alert-dismissible fade show" data-notify="container">
+                                        <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+                                          <i class="nc-icon nc-simple-remove"></i>
+                                        </button>
+                                        <span data-notify="icon" class="nc-icon nc-bell-55"></span>
+                                        <span data-notify="message"><b> Hoorayy - </b>
+                                          File kamu telah diupload : )</span>
+                                      </div>
+                                      <div class="alert alert-danger alert-with-icon alert-dismissible fade show" data-notify="container">
+                                        <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+                                          <i class="nc-icon nc-simple-remove"></i>
+                                        </button>
+                                        <span data-notify="icon" class="nc-icon nc-bell-55"></span>
+                                        <span data-notify="message"><b> Oops - </b>
+                                          Terjadi masalah saat upload : (</span>
+                                      </div>
+                                      <form id="uploadBuku">
+                                        <div class="upload">
+                                          <progress value="0" max="100" id="uploader">0%</progress>
+                                          <input type="file" value="upload" id="fileButton" hidden />
+                                          <label for="fileButton">Klik!</label>
+                                        </div>
+                                      </form>
+                                      <ul class="list-group" id="ebookList">
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                        </div>
+                        <!-- Sidenav END -->
+
+                        <footer class="footer footer-black  footer-white ">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <nav class="footer-nav">
+                                <ul>
+                                  <li>
+                                    <a href="https://github.com/creativetimofficial/paper-dashboard" target="_blank">Paper Dashboard</a>
+                                  </li>
+                                </ul>
+                              </nav>
+                              <div class="credits ml-auto">
+                                <span class="copyright">
+                                  © <script>
+                                    document.write(new Date().getFullYear())
+                                  </script>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </footer>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="login_div" style="display: none;">
+                    <div class="container">
+                      <div id="login-row" class="row justify-content-center align-items-center">
+                        <div id="login-column" class="col-md-6">
+                          <div id="login-box" class="col-md-12">
+                            <div class="form">
+                              <h3 class="text-center text-info">Login</h3>
+                              <div class="form-group">
                                 <label for="email" class="text-info">Email:</label><br>
                                 <input type="text" class="form-control" placeholder="Email.." id="inputEmail">
-                            </div>
-                            <div class="form-group">
+                              </div>
+                              <div class="form-group">
                                 <label for="password" class="text-info">Password:</label><br>
                                 <input type="password" class="form-control" placeholder="Password.." id="inputPassword">
-                            </div>
-                            <div class="form-group">
+                              </div>
+                              <div class="form-group">
                                 <label for="button" class="text-info">Klik tombol Masuk!</label><br>
                                 <button onclick="login()" class="btn btn-info btn-md">Masuk!</button>
+                              </div>
                             </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  <!-- Core JS Firebase -->
-  <script src="/__/firebase/8.3.0/firebase-app.js"></script>
-  <script src="/__/firebase/8.3.0/firebase-auth.js"></script>
-  <script src="/__/firebase/8.3.0/firebase-database.js"></script>
-  <script src="/__/firebase/8.3.0/firebase-storage.js"></script>
-  <script src="/__/firebase/init.js"></script>
-  <script src="../scripts/admin.js"></script>
-  <!--   Core JS Files   -->
-  <script src="assets/js/core/jquery.min.js"></script>
-  <script src="assets/js/core/popper.min.js"></script>
-  <script src="assets/js/core/bootstrap.min.js"></script>
-  <!-- Chart JS -->
-  <script src="assets/js/plugins/chartjs.min.js"></script>
-  <!-- Perfect scroll -->
-  <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+                  </div>
+                  <!-- Core JS Firebase -->
+                  <script src="/__/firebase/8.3.0/firebase-app.js"></script>
+                  <script src="/__/firebase/8.3.0/firebase-auth.js"></script>
+                  <script src="/__/firebase/8.3.0/firebase-database.js"></script>
+                  <script src="/__/firebase/8.3.0/firebase-storage.js"></script>
+                  <script src="/__/firebase/init.js"></script>
+                  <script src="../scripts/admin.js"></script>
+                  <!--   Core JS Files   -->
+                  <script src="assets/js/core/jquery.min.js"></script>
+                  <script src="assets/js/core/popper.min.js"></script>
+                  <script src="assets/js/core/bootstrap.min.js"></script>
+                  <!-- Chart JS -->
+                  <script src="assets/js/plugins/chartjs.min.js"></script>
+                  <!-- Perfect scroll -->
+                  <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
 
-  <!--  Notifications Plugin    -->
-  <script src="assets/js/plugins/bootstrap-notify.js"></script>
-  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>
-  <script src="assets/demo/demo.js"></script>
-  <script>
-    $(document).ready(function() {
-      // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
-      demo.initChartsPages();
-    });
-  </script>
+                  <!--  Notifications Plugin    -->
+                  <script src="assets/js/plugins/bootstrap-notify.js"></script>
+                  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+                  <script src="assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>
+                  <script src="assets/demo/demo.js"></script>
+                  <script>
+                    $(document).ready(function() {
+                      // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
+                      demo.initChartsPages();
+                    });
+                  </script>
 
-</body>
+                </body>
 
-</html>
+              </html>
